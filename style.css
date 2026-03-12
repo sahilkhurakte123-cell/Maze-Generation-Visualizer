@@ -1,0 +1,286 @@
+
+
+ .container {
+    background: rgb(157, 128, 128);
+    display: inline-block;
+    border: 5px solid black;
+    flex-grow : 1
+  }
+  
+  .grid {
+    display: grid;
+    border: 2px solid #F6FF56;
+  }
+
+  .cell {
+     /* center the cell content */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: Arial;
+    font-size: 3rem;
+    font-weight: bold;
+    background: white;
+  }
+
+  .navbar{
+    flex-grow:  0.05;
+    background-color:  #00A0DC;
+    height: 50px;
+
+  }
+
+  .main{
+    display : flex;
+    height: 100vh;
+    width: 1000vh;
+    flex-direction: column;
+  }
+
+  li {
+    color: #d2d2d2;
+  }
+
+  #para {
+    color: #D2d2d2;
+  }
+
+  h2 {
+    margin-top: 30px;
+    /* margin-left: 50px; */
+    text-align: center;
+    color: #D2d2d2;
+    text-decoration: underline;
+  }
+
+  .content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap;  */
+  }
+
+
+  .left {
+    /* flex-grow: 0.5; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #00171f;
+    border-right: 2px solid black;
+  }
+
+  .right{
+    /* flex-grow: 0.5; */
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #003459;
+  }
+
+  #para{
+    margin-left: 5px;
+    margin-top: 20px;
+    color : #F6F4F2;
+  }
+
+  #go {
+    color: #D2d2d2;
+    margin-top: 50px;
+    margin-left: 45%;
+    width: fit-content;
+    padding: 10px 30px;
+    background-color: #252423;
+    border: 2px solid #d2d2d2;
+}
+
+
+.controls{
+  flex : 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.northeast{
+  color :rgba(0, 0, 255, 0.566);
+}
+
+.main__controls__button{
+  display: flex;
+  flex-direction: column;
+  color : #D2d2d2;
+  padding : 30px 30px;
+  align-items: center;
+}
+
+span{
+  margin-top: 10px;
+}
+
+#setsize {
+  border: 1px solid #D2d2d2;
+  color: #D2d2d2;
+  background-color: #252423;
+}
+
+.main__controls__button:hover{
+  background-color: #343434;
+}
+
+.gridsize {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.forn{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form{
+  display: flex;
+  align-items: center;
+}
+
+.dosubmit{
+  display: flex;
+  align-items: center;
+}
+
+#sizen{
+  width : 50px;
+}
+
+#sizem{
+  width : 50px;
+}
+
+
+/*
+ * Pleasing the eye
+ */
+ @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:700');
+
+
+
+ html,
+ body {
+   display: flex;
+   width: 100%;
+   height: 100%;
+   justify-content: space-around;
+   align-items: center;
+   padding: 0;
+   margin: 0;
+   color: #747474;
+   background: linear-gradient(to bottom right, #E3E0DD, #E3E0DD);
+   font-family: 'Source Sans Pro', sans-serif;
+   overflow: hidden;
+ }
+ 
+ 
+ 
+ /*
+  * Plugin style
+  */
+ .numberstyle-qty {
+   position: relative;
+   border-radius: 6px;
+   background-color: #FFFFFF;
+   overflow: hidden;
+   box-shadow: 0 3px 6px rgba(#747474,0.25);
+ }
+ 
+ .numberstyle-qty input,
+ .numberstyle-qty .qty-btn {
+   position: relative;
+   display: block;
+   float: left;
+   height: 40px;
+   padding: 0;
+   margin: 0;
+   border: 0px;
+   text-align: center;
+   line-height: 40px;
+   outline: 0;
+   box-shadow: 0px;
+ }
+   
+ .numberstyle-qty .qty-btn {
+   width: 40px;
+   font-size: 18px;
+   cursor: pointer;
+   z-index: 2;
+   user-select: none;
+   transition: all 250ms ease;
+ }  
+ 
+ .numberstyle-qty .qty-btn.disabled {
+   cursor: default;
+   color: rgba(#747474,0.5);
+ }
+   
+ .numberstyle-qty input {
+   width: 50px;
+   border-left: 0;
+   border-right: 0;
+   color: #747474;
+   font-size: 18px;
+   font-weight: 700;
+   z-index: 1;
+ }
+ 
+ .numberstyle-qty input:focus {
+   outline: 0;
+   box-shadow: 0px;
+ }
+     
+ .numberstyle-qty input[type=number]::-webkit-inner-spin-button,
+ .numberstyle-qty input[type=number]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+ }
+     
+ .numberstyle-qty input[type=number] {
+   -moz-appearance: textfield;
+ }
+ 
+ 
+ /*
+  * More from me link 🔥
+  */
+ .more {
+   position: absolute;
+   bottom: 15px;
+   right: 15px;
+   padding: 7px 21px;
+   border-radius: 8px;
+   color: #fff;
+   background-color: rgba(0,0,0,.2);
+   font-family: 'Source Sans Pro', sans-serif;
+   font-size: 0.7rem;
+   font-weight: 700;
+   text-transform: uppercase;
+   text-decoration: none;
+   overflow: hidden;
+   z-index: 1;
+   animation: reveal 5000ms cubic-bezier(.87,-.41,.19,1.44);
+ }
+ 
+ @keyframes reveal {
+     0%, 90% {
+      bottom: -30px;
+   }
+    100% {
+      bottom: 15px;
+   }
+ }

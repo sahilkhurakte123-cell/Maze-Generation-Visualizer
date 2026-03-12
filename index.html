@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./util/style.css" />
+    <script src="./util/anime.js"></script>
+    <script src="./util/anime.es"></script>
+    <script src="./util/anime.es.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <title>Maze Generator</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Maze Visualizer </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active"
+              href="./index.html">DFS <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="./util/prims.html">Prims</a>
+            <a class="nav-item nav-link" href="./util/kruskals.html">Kruskals</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="content">
+        <script src="./util/index.js" defer></script>
+        <div class="left"></div>
+        <div class="right">
+          <h2>Depth First Search and Recursive Backtracker</h2>
+          <p id="para">
+            <ul>
+              <li>Choose a starting point in the field.</li>
+            <li>Randomly choose a wall at that point and carve a passage through to the adjacent cell, but only if the adjacent cell has not been visited yet. This becomes the new current cell.</li>
+            <li>If all adjacent cells have been visited, we will backtrack recursively to the last cell which has uncarved walls.</li>
+            <li>The algorithm ends when all the cells are visited and we have backtrracked to the starting point.</li>
+            </ul>
+          </p>
+          <!-- <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ab magni repellendus deserunt nisi a ipsam rerum adipisci reiciendis ducimus! Quaerat necessitatibus labore rerum debitis iste accusantium nemo voluptatibus, dolores consequuntur aut itaque explicabo eligendi veritatis doloribus ad sequi assumenda quam magni temporibus fuga aliquid sunt expedita fugit. Vitae, voluptas!
+          </p> -->
+          <button id="go">Start!</button>
+          <div class="gridsize">
+            <div class="forn">
+              <label style="color: #d2d2d2; margin-right: 10px"
+                >Choose Number of Rows:</label
+              >
+              <input
+                id="sizen"
+                class="numberstyle"
+                type="number"
+                min="1"
+                step="1"
+                value="1"
+              />
+            </div>
+            <div class="form">
+              <label style="color: #d2d2d2; margin-right: 10px"
+                >Choose Number of Columns:</label
+              >
+              <input
+                id="sizem"
+                class="numberstyle"
+                type="number"
+                min="1"
+                step="1"
+                value="1"
+              />
+            </div>
+            <div class="dosubmit">
+              <input id="setsize" type="submit" value="Submit" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
