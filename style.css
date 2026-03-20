@@ -1,6 +1,4 @@
-
-
- .container {
+  .container {
     background: rgb(157, 128, 128);
     display: inline-block;
     border: 5px solid black;
@@ -184,7 +182,7 @@ span{
    color: #747474;
    background: linear-gradient(to bottom right, #E3E0DD, #E3E0DD);
    font-family: 'Source Sans Pro', sans-serif;
-   overflow: hidden;
+   overflow: auto;
  }
  
  

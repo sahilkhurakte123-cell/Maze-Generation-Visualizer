@@ -1,4 +1,3 @@
-
 let setsize = document.querySelector('#setsize');
 let n , m;
 setsize.addEventListener("click" , function(){    
@@ -6,6 +5,11 @@ setsize.addEventListener("click" , function(){
     n -= 0;
     m = document.querySelector("#sizem").value;
     m -= 0;
+
+    ord = [];
+    visited = [];
+    document.querySelector('.left').innerHTML = "";
+
     createGrid(n , m);
 });
 
@@ -192,12 +196,9 @@ function animate(index , cid , type , direction , parent) {
   myanimation.play();
 }
 
-function clickHandler(event) {
-  staggersAnimation.play();
-}
-
 const btn = document.querySelector('#go');
 btn.addEventListener('click', function() {
+  ord = [];
   dfs(0 , 0 , 2 , 0);
   setTimeout(function() {
     animate(0 , ord[0][0] * m + ord[0][1] , 1 , ord[0][3] , ord[0][4]);
